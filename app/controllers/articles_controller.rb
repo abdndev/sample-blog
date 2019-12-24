@@ -1,4 +1,7 @@
 class ArticlesController < ApplicationController
+  #before_filter :authenticate_user!  # старый синтаксис до rails 5
+  before_action :authenticate_user!  
+
 
   def index
     @articles = Article.all
