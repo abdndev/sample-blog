@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   #before_filter :authenticate_user!  # старый синтаксис до rails 5
-  before_action :authenticate_user!  
+  before_action :authenticate_user!, :only => [:new, :create] 
 
 
   def index
