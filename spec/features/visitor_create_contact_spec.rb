@@ -4,7 +4,7 @@ feature "Contact Creation" do
   scenario "allows acees to contact page" do
     visit '/contacts'
 
-    expect(page).to have_content 'Contact Us'
+    expect(page).to have_content I18n.t('contacts.contact_us')
   end   
 end
 
